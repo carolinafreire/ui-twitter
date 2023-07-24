@@ -1,0 +1,169 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+color: #0f1419;
+-webkit-font-smoothing: antialiased;
+}
+
+:root {
+  --twitter-blue: #1da1f2;
+}
+
+body, input, textarea, button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+
+/* TIMELINE */
+
+.layout {
+margin: 0 auto;
+max-width: 1000px;
+display: grid;
+grid-template-columns: 300px 1fr;
+}
+
+.sidebar {
+padding: 1.5rem 1.25rem;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+.sidebar .logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sidebar .newTweet {
+background: var(--twitter-blue);
+border-radius: 9999px;
+padding: 1rem;
+display: flex;
+justify-content: center;
+width: 100%;
+color: #fff;
+font-size: 1.25rem;
+font-weight: 900;
+border: 0;
+}
+
+.sidebar .newTweet:hover {
+  filter: brightness(0.9);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.menu a.active {
+  color: var(--twitter-blue);
+}
+
+.menu a svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.content {
+border-left: 1px solid #e6ecf0;
+border-right: 1px solid #e6ecf0;
+}
+
+.timelineHeader {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25rem;
+  font-weight: 700;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+.timelineHeader svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--twitter-blue);
+}
+.newTweetForm {
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.newTweetForm label {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.newTweetForm label img {
+width: 3rem;
+height: 3rem;
+border-radius: 9999px;
+}
+
+.newTweetForm label textarea {
+ flex: 1;
+ border: 0;
+ font-size: 1.25rem;
+ font-weight: 500;
+ margin-top: 0.75rem;
+ resize: none;
+}
+
+.newTweetForm label textarea:focus {
+  outline: none;
+}
+
+.newTweetForm label textarea::placeholder {
+  color: #5b7083;
+}
+
+.newTweetForm button[type=submit] {
+margin-left: auto;
+background: var(--twitter-blue);
+border-radius: 9999px;
+padding: 0.75rem 1.5rem;
+color: #fff;
+font-size: 1rem;
+font-weight: 900;
+border: 0;
+}
+
+.newTweetForm button[type=submit]:hover {
+ filter: brightness(0.9);
+  }
+
+.separator {
+  background: #f7f9fa;
+  border-top: 1px solid #e6ecf0;
+  border-bottom: 1px solid #e6ecf0;
+  height: 0.75rem;
+  }
